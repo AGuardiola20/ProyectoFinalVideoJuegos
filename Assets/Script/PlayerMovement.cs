@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private Animator animator;
+    private float LastShoot;
 
     public float JumpForce;
     public float Speed;
+    public GameObject BulletPrefab;
     
     // Start is called before the first frame update
     void Start()
@@ -24,9 +26,15 @@ public class PlayerMovement : MonoBehaviour
     {
         //Input.GetAxisRaw(x) = Se obtienen valores en funcion de la tecla que pulse la persona
         Horizontal = Input.GetAxisRaw("Horizontal");
+
+        //Turn around
+        if(Horizontal < 0.0f)transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (Horizontal > 0.0f)transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         
+        //Run Animation
         animator.SetBool("running", Horizontal != 0.0f);
 
+        //Jump
         Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
         //Condicional para que avise si esta en el suelo
         if(Physics2D.Raycast(transform.position, Vector3.down, 0.1f)){
@@ -37,6 +45,14 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        if(Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.25f){
+            Shoot();
+            LastShoot = Time.time;
+        }
+    }
+
+    private void Jump(){
+        Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
     //Cuando se trabaja con fisicas es mejor utilizar FixedUpdate()
@@ -44,8 +60,16 @@ public class PlayerMovement : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
     }
 
-    private void Jump(){
-        Rigidbody2D.AddForce(Vector2.up * JumpForce);
+
+    //Shoot
+    private void Shoot(){
+        Vector3 direction;
+
+        if(transform.localScale.x == 1.0f) direction = Vector3.right;
+        else direction = Vector3.left;
+
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
 }
