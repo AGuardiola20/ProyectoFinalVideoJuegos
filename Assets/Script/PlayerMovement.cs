@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.25f){
+        if(Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.45f){
             Shoot();
             LastShoot = Time.time;
         }

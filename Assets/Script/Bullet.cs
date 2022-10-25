@@ -16,12 +16,16 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Rigidbody2D.velocity = Direction * Speed;
     }
 
     public void SetDirection(Vector2 direction){
         Direction = direction;
+    }
+
+    public void DestroyBullet(){
+        Destroy(gameObject);
     }
 }
