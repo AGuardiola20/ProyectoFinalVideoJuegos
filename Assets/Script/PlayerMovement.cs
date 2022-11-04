@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -45,10 +46,16 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        if(Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.45f){
+        if(Input.GetKeyDown(KeyCode.R)){
+            Restar();
+        }
+        if (Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.45f)
+        {
             Shoot();
             LastShoot = Time.time;
         }
+
+
     }
 
     private void Jump(){
@@ -70,6 +77,12 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<Bullet>().SetDirection(direction);
+    }
+
+    //Restart position
+    void Restar()
+    {
+        transform.position = (new Vector2(0.187f, -0.135f));
     }
 
 }

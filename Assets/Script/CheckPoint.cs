@@ -10,7 +10,7 @@ public class CheckPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerRespawn>().ReachedCheckPoint(transform.position.x,transform.position.y);
-            Console.WriteLine("holis");
+            
         }
     }
 }
