@@ -1,0 +1,323 @@
+fileFormatVersion: 2
+guid: 77e4726f474250f45b8065d1698cc6f6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Plataformas Nivel 1 arreglo tama\xF1o_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1f7aa4d2c1b1943944f1afa6693b90
+      internalID: -422486533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plataformas Nivel 1 arreglo tama\xF1o_1"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 200
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f061ab8cfd51f84898e08028ba6657c
+      internalID: 2077265878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plataformas Nivel 1 arreglo tama\xF1o_3"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 200
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5105262, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a19dc1db2bb3774385c9553a9adf256
+      internalID: -1766348045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plataformas Nivel 1 arreglo tama\xF1o_2"
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 200
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1fa903459f20b46aac55bdf371652e
+      internalID: 99567185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Plataformas Nivel 1 arreglo tama\xF1o_4"
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 200
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf1a7847d439d24d8a424de4c803aac
+      internalID: -2026411460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Plataformas Nivel 1 arreglo tama\xF1o_10": -2082356329
+      "Plataformas Nivel 1 arreglo tama\xF1o_51": 1527498642
+      "Plataformas Nivel 1 arreglo tama\xF1o_43": -1780758011
+      "Plataformas Nivel 1 arreglo tama\xF1o_12": -403871909
+      "Plataformas Nivel 1 arreglo tama\xF1o_16": -574150589
+      "Plataformas Nivel 1 arreglo tama\xF1o_46": 443528110
+      "Plataformas Nivel 1 arreglo tama\xF1o_38": 479164308
+      "Plataformas Nivel 1 arreglo tama\xF1o_47": -1143163067
+      "Plataformas Nivel 1 arreglo tama\xF1o_66": 1484976556
+      "Plataformas Nivel 1 arreglo tama\xF1o_39": 1767539196
+      "Plataformas Nivel 1 arreglo tama\xF1o_41": 1589302307
+      "Plataformas Nivel 1 arreglo tama\xF1o_54": 607189914
+      "Plataformas Nivel 1 arreglo tama\xF1o_3": -1766348045
+      "Plataformas Nivel 1 arreglo tama\xF1o_71": -485746105
+      "Plataformas Nivel 1 arreglo tama\xF1o_13": -654392475
+      "Plataformas Nivel 1 arreglo tama\xF1o_14": 1797880172
+      "Plataformas Nivel 1 arreglo tama\xF1o_57": 1749860345
+      "Plataformas Nivel 1 arreglo tama\xF1o_6": 1644318076
+      "Plataformas Nivel 1 arreglo tama\xF1o_40": 1249893378
+      "Plataformas Nivel 1 arreglo tama\xF1o_2": 99567185
+      "Plataformas Nivel 1 arreglo tama\xF1o_0": -422486533
+      "Plataformas Nivel 1 arreglo tama\xF1o_11": -1508661008
+      "Plataformas Nivel 1 arreglo tama\xF1o_24": -240606197
+      "Plataformas Nivel 1 arreglo tama\xF1o_48": 1774203196
+      "Plataformas Nivel 1 arreglo tama\xF1o_21": 781022721
+      "Plataformas Nivel 1 arreglo tama\xF1o_36": -1136209375
+      "Plataformas Nivel 1 arreglo tama\xF1o_35": 467237038
+      "Plataformas Nivel 1 arreglo tama\xF1o_31": 1862726296
+      "Plataformas Nivel 1 arreglo tama\xF1o_5": 1672981678
+      "Plataformas Nivel 1 arreglo tama\xF1o_33": -1339010533
+      "Plataformas Nivel 1 arreglo tama\xF1o_55": 1667929767
+      "Plataformas Nivel 1 arreglo tama\xF1o_8": 460308579
+      "Plataformas Nivel 1 arreglo tama\xF1o_30": 2086717737
+      "Plataformas Nivel 1 arreglo tama\xF1o_70": -1681802227
+      "Plataformas Nivel 1 arreglo tama\xF1o_32": 1291803805
+      "Plataformas Nivel 1 arreglo tama\xF1o_59": -778118627
+      "Plataformas Nivel 1 arreglo tama\xF1o_44": -275222510
+      "Plataformas Nivel 1 arreglo tama\xF1o_34": -822901441
+      "Plataformas Nivel 1 arreglo tama\xF1o_18": -1966070830
+      "Plataformas Nivel 1 arreglo tama\xF1o_37": -318389014
+      "Plataformas Nivel 1 arreglo tama\xF1o_52": 1421221118
+      "Plataformas Nivel 1 arreglo tama\xF1o_4": -2026411460
+      "Plataformas Nivel 1 arreglo tama\xF1o_42": 583123024
+      "Plataformas Nivel 1 arreglo tama\xF1o_50": -816980784
+      "Plataformas Nivel 1 arreglo tama\xF1o_7": -1420776636
+      "Plataformas Nivel 1 arreglo tama\xF1o_62": -714249082
+      "Plataformas Nivel 1 arreglo tama\xF1o_61": -10691034
+      "Plataformas Nivel 1 arreglo tama\xF1o_49": 1609484037
+      "Plataformas Nivel 1 arreglo tama\xF1o_9": 644230859
+      "Plataformas Nivel 1 arreglo tama\xF1o_15": 566809518
+      "Plataformas Nivel 1 arreglo tama\xF1o_65": 95302730
+      "Plataformas Nivel 1 arreglo tama\xF1o_58": -1660861837
+      "Plataformas Nivel 1 arreglo tama\xF1o_68": 1780590665
+      "Plataformas Nivel 1 arreglo tama\xF1o_1": 2077265878
+      "Plataformas Nivel 1 arreglo tama\xF1o_27": 1126848367
+      "Plataformas Nivel 1 arreglo tama\xF1o_29": 1506425520
+      "Plataformas Nivel 1 arreglo tama\xF1o_17": -1363519568
+      "Plataformas Nivel 1 arreglo tama\xF1o_60": -606967544
+      "Plataformas Nivel 1 arreglo tama\xF1o_26": 836796045
+      "Plataformas Nivel 1 arreglo tama\xF1o_25": -464335260
+      "Plataformas Nivel 1 arreglo tama\xF1o_28": 892927903
+      "Plataformas Nivel 1 arreglo tama\xF1o_69": -230768719
+      "Plataformas Nivel 1 arreglo tama\xF1o_22": 1634114417
+      "Plataformas Nivel 1 arreglo tama\xF1o_45": -423446434
+      "Plataformas Nivel 1 arreglo tama\xF1o_67": -972921373
+      "Plataformas Nivel 1 arreglo tama\xF1o_63": -1394364768
+      "Plataformas Nivel 1 arreglo tama\xF1o_23": 1930031138
+      "Plataformas Nivel 1 arreglo tama\xF1o_53": 2049398945
+      "Plataformas Nivel 1 arreglo tama\xF1o_64": -851224323
+      "Plataformas Nivel 1 arreglo tama\xF1o_56": -1977222204
+      "Plataformas Nivel 1 arreglo tama\xF1o_19": 1576846141
+      "Plataformas Nivel 1 arreglo tama\xF1o_20": 120798933
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
