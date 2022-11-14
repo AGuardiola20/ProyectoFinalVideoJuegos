@@ -9,9 +9,14 @@ public class Enemy : MonoBehaviour
     public GameObject Player;
     public GameObject BulletPrefab;
 
+    private int Health = 3;
+
     // Update is called once per frame
     void Update()
     {
+        //Si el player esta muerto este codigo no se ejecuta por el return
+        if(Player == null) return;
+        
         Vector3 direction = Player.transform.position - transform.position;
         if(direction.x > 0.0f) transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3 (-1.0f, 1.0f, 1.0f);
@@ -34,5 +39,11 @@ public class Enemy : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<Bullet>().SetDirection(direction);
+    }
+
+    //Hit
+    public void Hit(){
+        Health = Health - 1;
+        if(Health == 0) Destroy(gameObject);
     }
 }

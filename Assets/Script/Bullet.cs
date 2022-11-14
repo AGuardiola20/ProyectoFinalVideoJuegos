@@ -28,4 +28,30 @@ public class Bullet : MonoBehaviour
     public void DestroyBullet(){
         Destroy(gameObject);
     }
+
+    public void OnTriggerEnter2D(Collider2D v) {
+        PlayerMovement player = v.GetComponent<PlayerMovement>();
+        Enemy enemy = v.GetComponent<Enemy>();
+        if(player != null){
+            player.Hit();
+        }
+        if(enemy != null){
+            enemy.Hit();
+        }
+        DestroyBullet();
+    }
+
+    /*
+    private void OnCollisionEnter2D(Collision2D v) {
+        PlayerMovement player = v.collider.GetComponent<PlayerMovement>();
+        Enemy enemy = v.collider.GetComponent<Enemy>();
+        if(player != null){
+            player.Hit();
+        }
+        if(enemy != null){
+            enemy.Hit();
+        }
+        DestroyBullet();
+    }
+    */
 }
