@@ -6,6 +6,7 @@ TagManager:
   tags:
   - key
   - door
+  - Teleporter
   layers:
   - Default
   - TransparentFX
