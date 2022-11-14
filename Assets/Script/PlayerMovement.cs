@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private float LastShoot;
 
+    //Vida
+    private int Health = 5;
+
     public float JumpForce;
     public float Speed;
     public GameObject BulletPrefab;
@@ -67,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
     }
 
+    //Hit
+    public void Hit(){
+        Health = Health - 1;
+        if(Health == 0) Destroy(gameObject);
+    }
 
     //Shoot
     private void Shoot(){
