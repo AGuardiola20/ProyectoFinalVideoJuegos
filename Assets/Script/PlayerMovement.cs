@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     //Vida
     private int Health = 5;
 
+    //Teleport
+    private GameObject currentTeleporter;
+
     public float JumpForce;
     public float Speed;
     public GameObject BulletPrefab;
@@ -57,8 +60,28 @@ public class PlayerMovement : MonoBehaviour
             Shoot();
             LastShoot = Time.time;
         }
+        //Tp
+        if(Input.GetKeyDown(KeyCode.E)){
+            if(currentTeleporter != null){
+                transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
+            }
+        }
 
+    }
 
+    //Tp
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Teleporter")){
+            currentTeleporter = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.CompareTag("Teleporter")){
+            if(other.gameObject == currentTeleporter){
+                currentTeleporter = null;
+            }
+        }
     }
 
     private void Jump(){
