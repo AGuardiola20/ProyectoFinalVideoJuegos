@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Puerta : MonoBehaviour
 {
+    private bool inDoor = false;
+    private GameObject door;
     public GameObject nokey;
     public GameObject key;
 
@@ -18,11 +20,23 @@ public class Puerta : MonoBehaviour
         //btnPuerta.SetActive(false);
     }
 
+    private void Update() {
+        if(inDoor){
+                if(Input.GetKeyDown(KeyCode.E)){
+                door.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+    }
+
     //Hace la accion cuando tocamos el collider
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag.Equals("key")){
             AbrirPuerta.llave += 1;
             Destroy(other.gameObject);
+        }
+
+        if(other.tag.Equals("door")){
+            door = other.gameObject.transform.Find("Puerta").gameObject;
         }
     }
 
@@ -31,14 +45,14 @@ public class Puerta : MonoBehaviour
         if(other.tag.Equals("door") && AbrirPuerta.llave == 0){
             nokey.SetActive(true);
         }
-
+        
         if(other.tag.Equals("door") && AbrirPuerta.llave == 1){
             key.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.F)){
-                
-            }
+            inDoor = true;
         }
     }
+    
+
     //Hace la accion cuando salimos del collider
     private void OnTriggerExit2D(Collider2D other) {
         if(other.tag.Equals("door") && AbrirPuerta.llave == 0){
@@ -48,6 +62,8 @@ public class Puerta : MonoBehaviour
         if(other.tag.Equals("door") && AbrirPuerta.llave == 1){
             key.SetActive(false);
         }
+
+        inDoor = false;
     }
 
 }
