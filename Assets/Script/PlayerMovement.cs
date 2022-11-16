@@ -41,32 +41,34 @@ public class PlayerMovement : MonoBehaviour
         //Run Animation
         animator.SetBool("running", Horizontal != 0.0f);
 
-        //Jump
-        Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
         //Condicional para que avise si esta en el suelo
         if(Physics2D.Raycast(transform.position, Vector3.down, 0.1f)){
             Grounded = true;
         }else Grounded = false;
         
+        //Jump
         if(Input.GetKeyDown(KeyCode.Space) && Grounded){
             Jump();
         }
 
+        //Checkpoint
         if(Input.GetKeyDown(KeyCode.R)){
             Restar();
         }
+
+        //Disparo
         if (Input.GetKeyDown(KeyCode.F) && Time.time > LastShoot + 0.45f)
         {
             Shoot();
             LastShoot = Time.time;
         }
+
         //Tp
         if(Input.GetKeyDown(KeyCode.E)){
             if(currentTeleporter != null){
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
             }
         }
-
     }
 
     //Tp
@@ -75,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
             currentTeleporter = other.gameObject;
         }
     }
-
     private void OnTriggerExit2D(Collider2D other) {
         if(other.CompareTag("Teleporter")){
             if(other.gameObject == currentTeleporter){
@@ -84,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Jump
     private void Jump(){
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
@@ -91,12 +93,6 @@ public class PlayerMovement : MonoBehaviour
     //Cuando se trabaja con fisicas es mejor utilizar FixedUpdate()
     private void FixedUpdate() {
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
-    }
-
-    //Hit
-    public void Hit(){
-        Health = Health - 1;
-        if(Health == 0) Destroy(gameObject);
     }
 
     //Shoot
@@ -108,6 +104,12 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<Bullet>().SetDirection(direction);
+    }
+
+    //Hit
+    public void Hit(){
+        Health = Health - 1;
+        if(Health == 0) Destroy(gameObject);
     }
 
     //Restart position
