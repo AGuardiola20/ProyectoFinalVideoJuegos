@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Checkpoint
         if(Input.GetKeyDown(KeyCode.R)){
-            Restar();
+            Restart();
         }
 
         //Disparo
@@ -108,12 +108,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Hit
     public void Hit(){
+        GameObject.FindWithTag("vida"+Health).SetActive(false);
         Health = Health - 1;
         if(Health == 0) Destroy(gameObject);
     }
 
     //Restart position
-    void Restar()
+    void Restart()
     {
         transform.position = (new Vector2(0.187f, -0.135f));
     }
