@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Checkpoint
         if(Input.GetKeyDown(KeyCode.R)){
-            Restar();
+            Restart();
         }
 
         //Disparo
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Tp
     private void OnTriggerEnter2D(Collider2D other) {
+
         if(other.CompareTag("Teleporter")){
             currentTeleporter = other.gameObject;
         }
@@ -108,14 +110,31 @@ public class PlayerMovement : MonoBehaviour
 
     //Hit
     public void Hit(){
+        GameObject.FindWithTag("vida"+Health).SetActive(false);
         Health = Health - 1;
-        if(Health == 0) Destroy(gameObject);
+        if (Health == 0)
+        {
+            CambiarEcenaClick("Perdida");
+            Destroy(gameObject);
+        }
     }
-
-    //Restart position
-    void Restar()
+    public void CambiarEcenaClick(string sceneName)
     {
-        transform.position = (new Vector2(0.187f, -0.135f));
+
+        StartCoroutine(retrasoEscena(sceneName));
+    }       
+
+    IEnumerator retrasoEscena(string sceneName)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        SceneManager.LoadScene(sceneName);
+    }
+    //Restart position
+    void Restart()
+    {
+        transform.position = (new Vector2(PlayerPrefs.GetFloat("checkPositionX"), PlayerPrefs.GetFloat("checkPositionY")));
     }
 
+
+    
 }

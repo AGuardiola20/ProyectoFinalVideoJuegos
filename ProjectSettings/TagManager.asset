@@ -7,6 +7,13 @@ TagManager:
   - key
   - door
   - Teleporter
+  - vida5
+  - vida4
+  - vida3
+  - vida2
+  - vida1
+  - continuarPartida
+  - winCondition
   layers:
   - Default
   - TransparentFX
