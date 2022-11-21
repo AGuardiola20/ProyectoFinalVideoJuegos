@@ -12,6 +12,8 @@ TagManager:
   - vida3
   - vida2
   - vida1
+  - continuarPartida
+  - winCondition
   layers:
   - Default
   - TransparentFX

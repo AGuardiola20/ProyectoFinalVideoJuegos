@@ -1,0 +1,15 @@
+[
+
+  {
+    "nivel": "PrimerNivel",
+    "superado": false,
+    "posInX": 6,
+    "posInY": 1
+  },
+  {
+    "nivel": "SegundoNivel",
+    "superado": false,
+    "posInX": 4.5,
+    "posInY": -0.5
+  }
+]
