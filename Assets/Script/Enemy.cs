@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         //Mathf.Abs(x + y) = Conseguir num positivo con el valor absoluto
         float distance = Mathf.Abs(Player.transform.position.x - transform.position.x);
 
-        if(distance < 1.0f && Time.time > LastShoot + 0.60f){
+        if(distance < 1.0f && Time.time > LastShoot + 0.90f){
             Shoot();
             LastShoot = Time.time;
         }
