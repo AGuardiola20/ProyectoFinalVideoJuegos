@@ -110,12 +110,14 @@ public class PlayerMovement : MonoBehaviour
 
     //Hit
     public void Hit(){
-        GameObject.FindWithTag("vida"+Health).SetActive(false);
-        Health = Health - 1;
+        if (Health>0) {
+            GameObject.FindWithTag("vida" + Health).SetActive(false);
+            Health = Health - 1;
+        }
+        
         if (Health == 0)
         {
             CambiarEcenaClick("Perdida");
-            Destroy(gameObject);
         }
     }
     public void CambiarEcenaClick(string sceneName)
