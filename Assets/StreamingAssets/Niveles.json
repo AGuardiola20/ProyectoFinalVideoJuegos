@@ -4,7 +4,7 @@
     "nivel": "PrimerNivel",
     "superado": false,
     "posInX": -1,
-    "posInY": 1
+    "posInY": 1.5
   },
   {
     "nivel": "SegundoNivel",
