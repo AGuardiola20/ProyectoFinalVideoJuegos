@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public GameObject Player;
     public GameObject BulletPrefab;
 
-    private int Health = 3;
+    private int Health = 1;
 
     // Update is called once per frame
     void Update()
