@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float LastShoot;
 
     //Vida
+    private GameObject[] vidas = new GameObject[5];
     private int Health = 5;
 
     //Teleport
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        cargarVidas();
 
     }
 
@@ -86,7 +88,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
+    //cae al vacio
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject vacio = GameObject.FindGameObjectWithTag("vacio");
+        if (collision.gameObject == vacio)
+        {
+            Hit();
+            Restart();
+        }
+    }
     //Jump
     private void Jump(){
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
@@ -108,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
         bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
+    
+
     //Hit
     public void Hit(){
         if (Health>0) {
@@ -120,6 +133,19 @@ public class PlayerMovement : MonoBehaviour
             CambiarEcenaClick("Perdida");
         }
     }
+    //recuperar vida
+    public bool sumarVida()
+    {
+        if (Health < 5)
+        {
+            vidas[Health].SetActive(true);
+            Health = Health + 1;
+            return true;
+        }
+        return false;
+    }
+
+    //cambio de escena
     public void CambiarEcenaClick(string sceneName)
     {
 
@@ -137,6 +163,13 @@ public class PlayerMovement : MonoBehaviour
         transform.position = (new Vector2(PlayerPrefs.GetFloat("checkPositionX"), PlayerPrefs.GetFloat("checkPositionY")));
     }
 
-
+    public void cargarVidas()
+    {
+        vidas[0] = GameObject.FindWithTag("vida1");
+        vidas[1] = GameObject.FindWithTag("vida2");
+        vidas[2] = GameObject.FindWithTag("vida3");
+        vidas[3] = GameObject.FindWithTag("vida4");
+        vidas[4] = GameObject.FindWithTag("vida5");
+    }
     
 }
