@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public GameObject Player;
     public GameObject BulletPrefab;
 
-    private int Health = 3;
+    private int Health = 1;
 
     // Update is called once per frame
     void Update()
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         //Mathf.Abs(x + y) = Conseguir num positivo con el valor absoluto
         float distance = Mathf.Abs(Player.transform.position.x - transform.position.x);
 
-        if(distance < 1.0f && Time.time > LastShoot + 0.90f){
+        if(distance < 0.8f && Time.time > LastShoot + 0.90f){
             Shoot();
             LastShoot = Time.time;
         }
