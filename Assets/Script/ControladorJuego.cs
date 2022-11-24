@@ -63,17 +63,7 @@ public class ControladorJuego : MonoBehaviour
     }
 
 
-    //entra en contacto con la condicion de victoria?
-    private void condicionVictoria(Collider2D collision)
-    {
-        if (collision.CompareTag("winCondition"))
-        {
-
-            collision.GetComponent<PlayerRespawn>().ReachedCheckPoint(transform.position.x, transform.position.y);
-
-        }
-    }
-
+    
 
 
 }
