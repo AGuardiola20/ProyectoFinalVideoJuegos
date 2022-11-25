@@ -91,13 +91,17 @@ public class PlayerMovement : MonoBehaviour
     //cae al vacio
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject vacio = GameObject.FindGameObjectWithTag("vacio");
-        if (collision.gameObject == vacio)
-        {
-            Hit();
-            Restart();
+        GameObject[] vacios = GameObject.FindGameObjectsWithTag("vacio");
+
+        foreach (GameObject vacio in vacios) {
+            if (collision.gameObject == vacio)
+            {
+                Hit();
+                Restart();
+            }
         }
     }
+    
     //Jump
     private void Jump(){
         Rigidbody2D.AddForce(Vector2.up * JumpForce);

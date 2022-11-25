@@ -454,7 +454,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite Final OG_1: -710657058
+      pared_top: -432894644
       puerta_cerrada13: -1218745439
       puerta_cerrada17: -1167283394
       puerta_cerrada5: -850521546
@@ -483,9 +483,9 @@ TextureImporter:
       Checkpoint_On: 98197598
       plat_derecho: -1354920235
       puerta_cerrada2: -1641994854
-      plataforma_Vidrio: -974666542
       puerta_cerrada10: -292135007
-      pared_top: -432894644
+      plataforma_Vidrio: -974666542
+      Sprite Final OG_1: -710657058
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

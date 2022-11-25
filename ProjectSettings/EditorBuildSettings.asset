@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Perdida.unity
     guid: 8d782e2b8f0c04d42a5c5f62166d7205
+  - enabled: 1
+    path: Assets/Scenes/Trans.unity
+    guid: 09498b59592170a4cb8c7b76b025c672
   m_configObjects: {}
