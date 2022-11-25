@@ -66,18 +66,9 @@ public class Victoria : MonoBehaviour
     {
         cargarNiveles();
 
-        foreach (Nivel n in niveles)
-        {
-            //PlayerPrefs.SetInt(n.nivel, 0);
-            if (PlayerPrefs.GetInt(n.nivel) == 0)
-            {
-                PlayerPrefs.SetFloat("checkPositionX", n.posIniX);
-                PlayerPrefs.SetFloat("checkPositionY", n.posIniY);
-                CambiarEcenaClick(n.nivel);
-                break;
-
-            }
-        }
+        
+                CambiarEcenaClick("Trans");
+              
 
     }
     public void CambiarEcenaClick(string sceneName)

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,12 +12,15 @@ using UnityEngine.UI;
 public class ControladorJuego : MonoBehaviour
 {
     public Nivel[] niveles;
+    public TextMeshProUGUI titulo;
+    public TextMeshProUGUI nombre;
 
     // Start is called before the first frame update
     void Start()
     {
         cargarNiveles();
         partidaComenzada();
+        cargarDatosNivel();
         
 
     }
@@ -25,7 +29,24 @@ public class ControladorJuego : MonoBehaviour
 
         
     }
-    
+    public void cargarDatosNivel()
+    {
+        if (titulo != null) { 
+        foreach (Nivel n in niveles)
+        {
+            //PlayerPrefs.SetInt(n.nivel, 0);
+            if (PlayerPrefs.GetInt(n.nivel) == 0)
+            {
+
+                titulo.text = n.titulo;
+                nombre.text = n.nombre;
+                break;
+
+            }
+        }
+    }
+        
+    }
 
     //Carga los niveles guardados en el json
     public void cargarNiveles()

@@ -56,7 +56,7 @@ public class CambiarEscenas : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("checkPositionX", n.posIniX);
                 PlayerPrefs.SetFloat("checkPositionY", n.posIniY);
-                CambiarEcenaClick(n.nivel);
+                CambiarEcenaClick("Trans");
                 break;
 
             }
