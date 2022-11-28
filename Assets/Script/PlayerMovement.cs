@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     public float Speed;
     public GameObject BulletPrefab;
+
+    //Efectos de Sonido
+    [SerializeField] private AudioClip saltoSonido;
+    [SerializeField] private AudioClip disparoSonido;
+
     
     // Start is called before the first frame update
     void Start()
@@ -105,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump
     private void Jump(){
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
+        ControladorSonido.Instance.EjecutarSonido(saltoSonido);
     }
 
     //Cuando se trabaja con fisicas es mejor utilizar FixedUpdate()
@@ -121,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<Bullet>().SetDirection(direction);
+        ControladorSonido.Instance.EjecutarSonido(disparoSonido);
     }
 
     
