@@ -2,14 +2,18 @@
 
   {
     "nivel": "PrimerNivel",
+    "nombre": "Primer nivel",
     "superado": false,
     "posInX": -1,
-    "posInY": 1.5
+    "posInY": 1.5,
+    "titulo": "La llegada del heroe"
   },
   {
     "nivel": "SegundoNivel",
+    "nombre": "Segundo nivel",
     "superado": false,
     "posInX": 4.5,
-    "posInY": -0.5
+    "posInY": -0.5,
+    "titulo":"No sé qué podría ir aquí"
   }
 ]
