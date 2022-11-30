@@ -1432,7 +1432,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -10029,7 +10029,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
-
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230167464
 GameObject:
@@ -11384,10 +11383,8 @@ MonoBehaviour:
   JumpForce: 150
   Speed: 1
   BulletPrefab: {fileID: 8830629538103171513, guid: 5cb4a92ca2930cc419bba02c22dbc1c9, type: 3}
-
   saltoSonido: {fileID: 8300000, guid: ea9dc0603c967574c90ec660d702819f, type: 3}
   disparoSonido: {fileID: 8300000, guid: 1f2b4f76c300bd145aba0fb8786589af, type: 3}
-
 --- !u!95 &1765005187
 Animator:
   serializedVersion: 4
