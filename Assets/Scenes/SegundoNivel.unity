@@ -533,7 +533,6 @@ GameObject:
   - component: {fileID: 285699014}
   - component: {fileID: 285699013}
   - component: {fileID: 285699012}
-  - component: {fileID: 285699011}
   m_Layer: 0
   m_Name: vidaExtra
   m_TagString: Untagged
@@ -541,19 +540,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &285699011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285699010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b22f4dc21b0364295ac1a74e363803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonido1: {fileID: 8300000, guid: ce33a27412e689a4ea9d077b75df40c8, type: 3}
 --- !u!114 &285699012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,7 +1239,6 @@ GameObject:
   - component: {fileID: 364789717}
   - component: {fileID: 364789716}
   - component: {fileID: 364789715}
-  - component: {fileID: 364789714}
   m_Layer: 0
   m_Name: vidaExtra (2)
   m_TagString: Untagged
@@ -1261,19 +1246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &364789714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364789713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b22f4dc21b0364295ac1a74e363803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonido1: {fileID: 8300000, guid: ce33a27412e689a4ea9d077b75df40c8, type: 3}
 --- !u!114 &364789715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,7 +2008,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e6547fd9547135841b0523d17b06cbb2, type: 3}
+  m_Sprite: {fileID: -376143683, guid: 7897cf0c17150ec488fbc2dee8ccd1e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9573,7 +9545,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31b9534ff35cd5a4d8fe5218ca167871, type: 3}
+  m_Sprite: {fileID: 1906336930, guid: 7897cf0c17150ec488fbc2dee8ccd1e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10652,7 +10624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368529021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.148, y: 1.688, z: 0}
+  m_LocalPosition: {x: 3.155, y: 1.695, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11238,7 +11210,6 @@ GameObject:
   - component: {fileID: 1503421227}
   - component: {fileID: 1503421226}
   - component: {fileID: 1503421225}
-  - component: {fileID: 1503421224}
   m_Layer: 0
   m_Name: vidaExtra (1)
   m_TagString: Untagged
@@ -11246,19 +11217,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1503421224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503421223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b22f4dc21b0364295ac1a74e363803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonido1: {fileID: 8300000, guid: ce33a27412e689a4ea9d077b75df40c8, type: 3}
 --- !u!114 &1503421225
 MonoBehaviour:
   m_ObjectHideFlags: 0
