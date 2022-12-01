@@ -10,7 +10,13 @@ public class CheckPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerRespawn>().ReachedCheckPoint(transform.position.x,transform.position.y);
-            
+            ChangeSprite();
         }
+    }
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = newSprite;
     }
 }
